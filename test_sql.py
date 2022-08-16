@@ -2,12 +2,10 @@
 # @Author: gviejo
 # @Date:   2022-02-12 18:49:44
 # @Last Modified by:   gviejo
-# @Last Modified time: 2022-02-13 09:53:56
+# @Last Modified time: 2022-08-16 11:15:23
 import sqlite3
 
-from sqlite3 import Error
-
-
+# from sqlite3 import Error
 
 connection = sqlite3.connect("/home/guillaume/pynalog/sm_app.sqlite")
 
@@ -24,10 +22,10 @@ CREATE TABLE IF NOT EXISTS users (
 
 create_posts_table = """
 CREATE TABLE IF NOT EXISTS posts(
-  id INTEGER PRIMARY KEY AUTOINCREMENT, 
-  title TEXT NOT NULL, 
-  description TEXT NOT NULL, 
-  user_id INTEGER NOT NULL, 
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  description TEXT NOT NULL,
+  user_id INTEGER NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users (id)
 );
 """

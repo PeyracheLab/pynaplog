@@ -3,6 +3,7 @@ name = "pynalog"
 version = "0.1.0"
 description = ""
 authors = ["gviejo <guillaume.viejo@gmail.com>"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
