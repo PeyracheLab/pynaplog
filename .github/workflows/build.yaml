@@ -1,5 +1,5 @@
 # .github/workflows/build.yaml
-name: extendedjson CI
+name: pynalog CI
 
 on:
   push:
