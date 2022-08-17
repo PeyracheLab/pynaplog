@@ -4,7 +4,7 @@
 # @Author: gviejo
 # @Date:   2022-08-15 22:29:59
 # @Last Modified by:   gviejo
-# @Last Modified time: 2022-08-16 20:44:35
+# @Last Modified time: 2022-08-17 14:21:11
 import numpy as np
 
 
@@ -18,7 +18,18 @@ def test():
     print("pynalog")
 
 
-def sum(n):
-    a = np.random.rand(n)
-    s = np.sum(a)
-    return s
+def plogsum(nmg):
+    """Summary
+
+    Parameters
+    ----------
+    nmg : TYPE
+        Description
+
+    Returns
+    -------
+    TYPE
+        Description
+    """
+    my_sum = np.sum(np.random.rand(nmg))
+    return my_sum

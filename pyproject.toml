@@ -1,35 +1,21 @@
+[tool.poetry]
+name = "pynalog"
+version = "0.0.1"
+description = "Logging manager for data analysis with pynapple"
+authors = ["gviejo <guillaume.viejo@gmail.com>"]
+license = "LICENSE"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.23.2"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+pytest = "^7.1.2"
+flake8 = "^5.0.4"
+pylint = "^2.14.5"
+black = "^22.6.0"
+
 [build-system]
-requires = [
-  "setuptools>=54",
-  "wheel"
-]
-build-backend = "setuptools.build_meta"
-
-[tool.black]
-target-version = ['py36', 'py37', 'py38']
-skip-string-normalization = false
-exclude = '''
-(
-  /(
-      \.eggs
-    | \.git
-    | \.hg
-    | \.mypy_cache
-    | \.md
-    | \.toml
-    | \.cfg
-    | \.txt
-    | \.tox
-    | \.venv
-    | _build
-    | buck-out
-    | build
-    | dist
-    | examples
-  )/
-)
-'''
-
-[tool.isort]
-multi_line_output = 3
-include_trailing_comma = true
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
