@@ -1,24 +1,40 @@
-[tool.poetry]
-name = "pynalog"
-version = "0.0.1"
-description = "Logging manager for data analysis with pynapple"
-authors = ["Guillaume Viejo <guillaume.viejo@gmail.com>"]
-license = "LICENSE"
-readme = "README.md"
-
-[tool.poetry.dependencies]
-numpy = "^1.23.2"
-
-[tool.poetry.dev-dependencies]
-isort = "^5.10.1"
-pytest = "^7.1.2"
-flake8 = "^5.0.4"
-pylint = "^2.14.5"
-black = "^22.6.0"
-
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "pynalog"
+version = "0.0.2"
+description = "Logging manager for data analysis with pynapple"
+readme = "README.md"
+authors = [{ name = "Guillaume Viejo", email = "guillaume.viejo@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["pynapple"]
+dependencies = [
+    "numpy",
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+	"black", 
+	"bumpver", 
+	"isort", 
+	"pip-tools", 
+	"pytest",
+	"flake8",
+	"pylint"
+	]
+
+[project.urls]
+Homepage = "https://github.com/PeyracheLab/pynalog"
+
 
 [tool.black]
 target-version = ['py36', 'py37', 'py38']
@@ -47,4 +63,4 @@ exclude = '''
 
 [tool.isort]
 multi_line_output = 3
-include_trailing_comma = true 
+include_trailing_comma = true
