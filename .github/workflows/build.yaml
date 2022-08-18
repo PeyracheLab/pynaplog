@@ -23,8 +23,10 @@ jobs:
           pip install .[dev]
       - name: Lint
         run: |
-          black . --check
-          isort . --check
+          black --check pynalog
+          isort --check pynalog
+          flake8 pynalog --max-complexity 10
+          pylint pynalog          
   # build:
   #   runs-on: ubuntu-latest
   #   strategy:
