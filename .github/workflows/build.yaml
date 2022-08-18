@@ -51,7 +51,8 @@ jobs:
           pip install .[dev]
       - name: Test
         run: |
-          pytest
+          coverage run --source=pynalog --branch -m pytest tests/
+          coverage report -m          
 
       # - name: Coveralls
       #   env:

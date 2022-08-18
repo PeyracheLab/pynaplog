@@ -29,7 +29,8 @@ dev = [
 	"pip-tools", 
 	"pytest",
 	"flake8",
-	"pylint"
+	"pylint",
+	"coverage"
 	]
 
 [project.urls]
