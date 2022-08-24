@@ -2,4 +2,4 @@
 High level classes
 """
 
-from .pynalog import plogsum, test  # noqa: F401
+from .pynalog import coding_club, plogsum, test  # noqa: F401
